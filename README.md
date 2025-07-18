@@ -67,7 +67,7 @@ To view the evaluation metrics for this project run: `dvc metrics show model_eva
 
 
 #### `Contributions and Collaboration` 👩🏻‍🤝‍👨🏽
-For any contributions or collaboartion, ensure you follow the procesdures below:
+For any contributions or collaboartion, ensure you follow the procedures below:
 
 1. You **change data or code** (for instance, in `src/`) and to **track new or updated data files do**: `dvc add data/<new-data-file>`
 2. You will need to **reproduce the pipeline** to re-run all stages as needed and do: `dvc repro`
