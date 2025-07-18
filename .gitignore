@@ -1,0 +1,16 @@
+# THE .GITIGNORE FILES TO SAVE AND TRACK FILES OR FOLDERS NOT TO BE COMMITTED INTO THE REPO
+
+# FOLDERS FROM THE DVC THAT NEED NOT TO BE TRACKED
+data/
+model/
+model_evaluation/
+
+
+# FOLDERS AND FILES NOT TO BE TRACKED FROM SRC
+src/data
+src/model
+src/model_evaluation
+src/config.py
+src/dvc_commands.txt
+**/__pycache__/
+

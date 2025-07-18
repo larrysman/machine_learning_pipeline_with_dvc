@@ -1,0 +1,44 @@
+stages:
+  data_collection:
+    cmd: python src/data_collection.py
+    deps:
+    - src/data_collection.py
+    outs:
+    - data/raw
+  data_preparation:
+    cmd: python src/data_preparation.py
+    deps:
+    - data/raw
+    - src/data_preparation.py
+    outs:
+    - data/preparation
+  feature_engineering:
+    cmd: python src/feature_engineering.py
+    deps:
+    - data/preparation
+    - src/feature_engineering.py
+    outs:
+    - data/feature_engineering
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - data/feature_engineering
+    - src/data_preprocessing.py
+    outs:
+    - data/data_preprocessing
+    - model/data_preprocessing_artifacts
+  model_building:
+    cmd: python src/model_building.py
+    deps:
+    - data/data_preprocessing
+    - src/model_building.py
+    outs:
+    - model/model_developed_artifacts
+  model_evaluation:
+    cmd: python src/model_evaluation.py
+    deps:
+    - data/data_preprocessing/test_data_preprocessed.csv
+    - model/model_developed_artifacts/model_artifact.pkl
+    - src/model_evaluation.py
+    outs:
+    - model_evaluation/classification_metrics/model_metrics.json
