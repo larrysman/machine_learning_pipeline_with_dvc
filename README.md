@@ -29,12 +29,28 @@ For this project the machine learning **stages** include:
 2. **`Data Preparation`**: *Clean, transform, and ensuring the dataset contains no missing or duplicates values.*
 3. **`Feature Engineering`**: *Engineer important and relevant features that may improve the performance of the models and aid analysis.*
 4. **`Data Preprocessing`**: *Perform Numerical features tranformation and categorical features encoding using the appropriate scalers and encoders.*
+   
+   - **`All data structure for stages with data as outputs`**
+
+     <img width="505" height="274" alt="image" src="https://github.com/user-attachments/assets/6f0bf5ae-97ec-4b84-b5b1-fea37bb13b6d" />
+
 5. **`Model Building`**: *Train machine learning models pn the training dataset.*
+
+   - **`Models and Artifacts`**
+
+     <img width="576" height="104" alt="image" src="https://github.com/user-attachments/assets/41b74907-1b78-4b36-8c0c-987fd6e100e0" />
+
 6. **`Model Evaluation`**: *Evaluate model performance and generate metrics.*
+
+   - **`Metrics`**
+     
+     <img width="510" height="52" alt="image" src="https://github.com/user-attachments/assets/dfad6ebc-ac45-461f-8eca-bbed1604b4df" />
+
 7. **`Deployment/Finalization`**: *Export or register final models or predictions.*
 
-<img width="730" height="578" alt="image" src="https://github.com/user-attachments/assets/ac1e33fe-387e-4ff3-aa83-e10c75e5a859" />
+    - **`Visualizing the Stage's Structure`, run:** `dvc dag`
 
+     <img width="730" height="578" alt="image" src="https://github.com/user-attachments/assets/ac1e33fe-387e-4ff3-aa83-e10c75e5a859" />
 
 `Please note that`: *Each stage is executed, tracked, and versioned by DVC, ensuring all outputs are reproducible and auditable.*
 
@@ -65,7 +81,6 @@ To view the evaluation metrics for this project run: `dvc metrics show model_eva
 
   - **`Compared Result with Other Versions or Branches`**: `dvc metrics diff`
 
-
 #### `Contributions and Collaboration` 👩🏻‍🤝‍👨🏽
 For any contributions or collaboartion, ensure you follow the procedures below:
 
@@ -81,7 +96,6 @@ For any contributions or collaboartion, ensure you follow the procedures below:
 `Please note:` *Remember, contributing to open source projects is more than just a code. You can also contribute by reporting bugs, suggesting new features, improving documentation, and more. Thank you for considering contributing to this project!!!🙌🙌🙌*
 
 🔚
-
 
 #### `Author`
 
