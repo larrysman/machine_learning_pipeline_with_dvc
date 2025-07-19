@@ -4,7 +4,11 @@ This project leverages on the understanding of developing an end-to-end machine 
 
 This project demonstrates a `reproducible, modular, and version-controlled machine learning pipeline` leveraging on data version control `dvc`, available here:[DVC](https://dvc.org/).
 
-The pipeline uses DVC to manage data, models, and experiment artifacts, while Git handles code and workflow definitions. This ensures the workflow is collaborative, auditable, and easy to reproduce at any time, allowing for collaboration and improvement.
+This pipeline uses DVC to manage data, models, and experiment artifacts, while Git handles code and workflow definitions. This ensures the workflow is collaborative, auditable, and easy to reproduce at any time, allowing for collaboration and improvement.
+
+`Short Notes on DVC`:
+*Versioning large data files and directories for data science is powerful, but often not enough. Data needs to be filtered, cleaned, and transformed before training ML models - for that purpose DVC introduces a build system to define, execute and track data pipelines — a series of data processing stages, that produce a final result. DVC is a `Makefile` system for machine learning projects!*
+*DVC pipelines are versioned using Git, and allow you to better organize projects and reproduce complete workflows and results at will. You could capture a simple ETL workflow, organize your project, or build a complex `DAG (Directed Acyclic Graph)` pipeline.*
 
 #### `Data Available`
 The purpose of this project is just to demonstrates an end-to-end machine learning pipeline with dvc and hence a very simple dataset on the room occupancy for a given entity and much information are not explicitly defined here.
