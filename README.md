@@ -52,9 +52,18 @@ For this project the machine learning **stages** include:
 
      <img width="730" height="578" alt="image" src="https://github.com/user-attachments/assets/ac1e33fe-387e-4ff3-aa83-e10c75e5a859" />
 
+    - **`Visualizing Outputs of stage`, run:** `dvc dag --outs`
+
+      <img width="794" height="579" alt="image" src="https://github.com/user-attachments/assets/c23e5f6f-3ccf-4a78-9585-032b3ea9014a" />
+
+    - **`Connection FlowChart`, run:** `dvc dag --mermaid`
+
+      <img width="759" height="225" alt="image" src="https://github.com/user-attachments/assets/6a1c31c7-f9d2-4cca-a37b-3fddd665366d" />
+
+
 `Please note that`: *Each stage is executed, tracked, and versioned by DVC, ensuring all outputs are reproducible and auditable.*
 
-#### `Project Setup Instruction`
+#### `Project Setup Instructions`
 - **`Set up the Python Virtual Environment`**: `python -m venv name_of_your_virtual_environment`
 - **`Activate the Python Virtual Environment`**:
   - `source name_of_your_virtual_environment/bin/activate` - *for MacOS*
