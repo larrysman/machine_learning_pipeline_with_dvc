@@ -10,6 +10,11 @@ This pipeline uses DVC to manage data, models, and experiment artifacts, while G
 *Versioning large data files and directories for data science is powerful, but often not enough. Data needs to be filtered, cleaned, and transformed before training ML models - for that purpose DVC introduces a build system to define, execute and track data pipelines — a series of data processing stages, that produce a final result. DVC is a `Makefile` system for machine learning projects!*
 *DVC pipelines are versioned using Git, and allow you to better organize projects and reproduce complete workflows and results at will. You could capture a simple ETL workflow, organize your project, or build a complex `DAG (Directed Acyclic Graph)` pipeline.*
 
+
+#### `Diagrammatic Flow`
+<img width="4988" height="1852" alt="diagram" src="https://github.com/user-attachments/assets/9d2052b5-fb17-4d6e-bdb3-d45c3c0e3a26" />
+
+
 #### `Data Available`
 The purpose of this project is just to demonstrates an end-to-end machine learning pipeline with dvc and hence a very simple dataset on the room occupancy for a given entity and much information are not explicitly defined here.
 
