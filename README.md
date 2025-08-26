@@ -72,6 +72,37 @@ For this project the machine learning **stages** include:
 
 `Please note that`: *Each stage is executed, tracked, and versioned by DVC, ensuring all outputs are reproducible and auditable.*
 
+
+##### `STAGING THE PIPELINE`
+```bash
+# TO STAGE THE PIPELINE AND CREATE THE DVC.YAML
+
+dvc stage add -n 'folder name for the stage' -d 'path to code or script dependencies needed to run the stage (add all the dependencies here)' -o 'path to the output folder or directory (add all output directories)' python 'path to code or script dependencies needed to run the stage (add all the dependencies here)'
+
+# WHEN THE PIPELINE IS STAGED FOR EACH, RUN DVC REPRO to reproduce
+dvc repro
+
+
+# STAGE 01
+dvc stage add -n data_collection -d src/data_collection.py -o data/raw python src/data_collection.py
+
+# STAGE 02
+dvc stage add -n data_preparation -d src/data_preparation.py -d data/raw -o data/preparation python src/data_preparation.py
+
+# STAGE 03
+dvc stage add -n feature_engineering -d src/feature_engineering.py -d data/preparation -o data/feature_engineering python src/feature_engineering.py
+
+# STAGE 04
+dvc stage add -n data_preprocessing -d src/data_preprocessing.py -d data/feature_engineering -o data/data_preprocessing -o model/data_preprocessing_artifacts python src/data_preprocessing.py
+
+# STAGE 05
+dvc stage add -n model_building -d src/model_building.py -d data/data_preprocessing -o model/model_developed_artifacts python src/model_building.py
+
+# STAGE 06
+dvc stage add -n model_evaluation -d src/model_evaluation.py -d data/data_preprocessing/test_data_preprocessed.csv -d model/model_developed_artifacts -o model_evaluation/classification_metrics python src/model_evaluation.py
+```
+
+
 #### `Project Setup Instructions`
 - **`Set up the Python Virtual Environment`**: `python -m venv name_of_your_virtual_environment`
 - **`Activate the Python Virtual Environment`**:
