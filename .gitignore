@@ -13,4 +13,4 @@ src/model_evaluation
 src/config.py
 src/dvc_commands.txt
 **/__pycache__/
-
+pca.py
